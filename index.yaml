@@ -1,6 +1,55 @@
 apiVersion: v1
 entries:
+  ingress:
+  - apiVersion: v2
+    appVersion: "3.4"
+    created: "2024-01-12T02:33:49.663075282Z"
+    dependencies:
+    - alias: controller
+      condition: controller.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: '>=2.33.1'
+    - alias: gateway
+      condition: gateway.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: '>=2.33.1'
+    description: Deploy Kong Ingress Controller and Kong Gateway
+    digest: d6092889219a302000045c12ca4ec2911ace4653dd6c65addcc5ef68e0ac1769
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: ingress
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/ingress
+    urls:
+    - https://github.com/sanyer/charts/releases/download/ingress-0.10.1/ingress-0.10.1.tgz
+    version: 0.10.1
   kong:
+  - apiVersion: v2
+    appVersion: "3.5"
+    created: "2024-01-12T02:33:49.846495496Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: The Cloud-Native Ingress and API-management
+    digest: a29982c17a341e787295583f131ea4b7761cc4815d93cd975ea7821c78b3aa27
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/kong
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-2.33.3/kong-2.33.3.tgz
+    version: 2.33.3
   - apiVersion: v1
     appVersion: "2"
     created: "2020-09-01T18:59:48.301045692Z"
@@ -307,4 +356,4 @@ entries:
     urls:
     - https://github.com/Kong/charts/releases/download/kong-0.36.5/kong-0.36.5.tgz
     version: 0.36.5
-generated: "2020-01-14T22:13:54.037646523Z"
+generated: "2024-01-12T02:33:49.846632213Z"
