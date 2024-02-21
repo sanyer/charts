@@ -2,6 +2,33 @@ apiVersion: v1
 entries:
   ingress:
   - apiVersion: v2
+    appVersion: "3.6"
+    created: "2024-02-21T20:59:13.573094503Z"
+    dependencies:
+    - alias: controller
+      condition: controller.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: '>=2.37.1'
+    - alias: gateway
+      condition: gateway.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: '>=2.37.1'
+    description: Deploy Kong Ingress Controller and Kong Gateway
+    digest: 8853c736d4c61d1fdec4872420b6aaed049b6f78804a835e31a1677f5f360cc9
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: ingress
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/ingress
+    urls:
+    - https://github.com/sanyer/charts/releases/download/ingress-0.11.1/ingress-0.11.1.tgz
+    version: 0.11.1
+  - apiVersion: v2
     appVersion: "3.4"
     created: "2024-01-17T19:33:40.746129591Z"
     dependencies:
@@ -56,6 +83,27 @@ entries:
     - https://github.com/sanyer/charts/releases/download/ingress-0.10.1/ingress-0.10.1.tgz
     version: 0.10.1
   kong:
+  - apiVersion: v2
+    appVersion: "3.6"
+    created: "2024-02-21T20:59:13.762757941Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: The Cloud-Native Ingress and API-management
+    digest: f62afda4e9aa1b6faeb1fd3d04a170671bd6d0c457c1d3e82b78daabd440d946
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/kong
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-2.37.1/kong-2.37.1.tgz
+    version: 2.37.1
   - apiVersion: v2
     appVersion: "3.5"
     created: "2024-01-12T02:33:49.846495496Z"
@@ -383,4 +431,4 @@ entries:
     urls:
     - https://github.com/Kong/charts/releases/download/kong-0.36.5/kong-0.36.5.tgz
     version: 0.36.5
-generated: "2024-01-17T19:33:40.746183101Z"
+generated: "2024-02-21T20:59:13.76293955Z"
