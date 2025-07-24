@@ -516,6 +516,37 @@ entries:
       artifacthub.io/prerelease: "true"
     apiVersion: v2
     appVersion: 2.0.0-alpha.2
+    created: "2025-07-24T15:28:42.919267143Z"
+    dependencies:
+    - condition: kic-crds.enabled
+      name: kic-crds
+      repository: ""
+      version: 1.2.0
+    - condition: gwapi-standard-crds.enabled
+      name: gwapi-standard-crds
+      repository: ""
+      version: 1.3.0
+    - condition: gwapi-experimental-crds.enabled
+      name: gwapi-experimental-crds
+      repository: ""
+      version: 1.3.0
+    description: Deploy Kong Operator
+    digest: 78ad07e4337290c91a18740863ff29a2163ffae68b8e518e0b5596bae0401c66
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong-operator
+    sources:
+    - https://github.com/Kong/kong-operator/charts/kong-operator/
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-operator-0.0.3/kong-operator-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      artifacthub.io/prerelease: "true"
+    apiVersion: v2
+    appVersion: 2.0.0-alpha.2
     created: "2025-07-24T09:30:15.818895117Z"
     dependencies:
     - condition: kic-crds.enabled
@@ -574,4 +605,4 @@ entries:
     urls:
     - https://github.com/sanyer/charts/releases/download/kong-operator-0.0.1/kong-operator-0.0.1.tgz
     version: 0.0.1
-generated: "2025-07-24T09:30:15.818941103Z"
+generated: "2025-07-24T15:28:42.919306496Z"
