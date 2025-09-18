@@ -144,6 +144,27 @@ entries:
   kong:
   - apiVersion: v2
     appVersion: "3.9"
+    created: "2025-09-18T15:30:46.275952155Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: The Cloud-Native Ingress and API-management
+    digest: e453bbc4c29d4e2c9c0336ce826ceaba6e866f7d891c5e476c4cc64bcf128355
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/kong
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-2.52.0/kong-2.52.0.tgz
+    version: 2.52.0
+  - apiVersion: v2
+    appVersion: "3.9"
     created: "2025-07-15T03:28:54.398075718Z"
     dependencies:
     - condition: postgresql.enabled
@@ -513,6 +534,48 @@ entries:
     version: 0.36.5
   kong-operator:
   - annotations:
+      artifacthub.io/category: networking
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://developer.konghq.com/operator/
+        - name: Repository
+          url: https://github.com/Kong/kong-operator
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Seamless Upgrades
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: "2.0"
+    created: "2025-09-18T15:30:46.523647322Z"
+    dependencies:
+    - name: ko-crds
+      repository: ""
+      version: 1.0.0
+    - condition: kic-crds.enabled
+      name: kic-crds
+      repository: ""
+      version: 1.2.0
+    - condition: gwapi-standard-crds.enabled
+      name: gwapi-standard-crds
+      repository: ""
+      version: 1.3.0
+    - condition: gwapi-experimental-crds.enabled
+      name: gwapi-experimental-crds
+      repository: ""
+      version: 1.3.0
+    description: Deploy Kong Operator
+    digest: eba88178203d4eb1c4cf7f41021fe558ce6e8d68a81671b2401e7f08cc7cbddb
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong-operator
+    sources:
+    - https://github.com/Kong/kong-operator/charts/kong-operator/
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-operator-1.0.1/kong-operator-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
       artifacthub.io/prerelease: "true"
     apiVersion: v2
     appVersion: 2.0.0
@@ -773,4 +836,4 @@ entries:
     urls:
     - https://github.com/sanyer/charts/releases/download/kong-operator-0.0.1/kong-operator-0.0.1.tgz
     version: 0.0.1
-generated: "2025-09-10T15:29:50.232306708Z"
+generated: "2025-09-18T15:30:46.523835896Z"
