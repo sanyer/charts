@@ -35,6 +35,33 @@ entries:
   ingress:
   - apiVersion: v2
     appVersion: "3.9"
+    created: "2026-01-11T21:28:44.929244232Z"
+    dependencies:
+    - alias: controller
+      condition: controller.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: =3.0.2
+    - alias: gateway
+      condition: gateway.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: =3.0.2
+    description: Deploy Kong Ingress Controller and Kong Gateway
+    digest: 2509ca75be9d7aafef4616113958c1163ccf196bab3d62c9ee20f81b80e86725
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: ingress
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/ingress
+    urls:
+    - https://github.com/sanyer/charts/releases/download/ingress-0.22.0/ingress-0.22.0.tgz
+    version: 0.22.0
+  - apiVersion: v2
+    appVersion: "3.9"
     created: "2025-07-15T03:28:54.203192812Z"
     dependencies:
     - alias: controller
@@ -937,4 +964,4 @@ entries:
     urls:
     - https://github.com/sanyer/charts/releases/download/kong-operator-0.0.1/kong-operator-0.0.1.tgz
     version: 0.0.1
-generated: "2026-01-07T21:28:43.0242753Z"
+generated: "2026-01-11T21:28:44.929324101Z"
