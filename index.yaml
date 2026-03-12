@@ -35,6 +35,33 @@ entries:
   ingress:
   - apiVersion: v2
     appVersion: "3.9"
+    created: "2026-03-12T15:29:09.909301001Z"
+    dependencies:
+    - alias: controller
+      condition: controller.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: =3.1.0
+    - alias: gateway
+      condition: gateway.enabled
+      name: kong
+      repository: https://charts.konghq.com
+      version: =3.1.0
+    description: Deploy Kong Ingress Controller and Kong Gateway
+    digest: a1e700736d96cc0aedc1c93fde436fd9bf8996f0a0a4b130f7cc45144b6a1513
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: ingress
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/ingress
+    urls:
+    - https://github.com/sanyer/charts/releases/download/ingress-0.23.0/ingress-0.23.0.tgz
+    version: 0.23.0
+  - apiVersion: v2
+    appVersion: "3.9"
     created: "2026-01-11T21:28:44.929244232Z"
     dependencies:
     - alias: controller
@@ -169,6 +196,27 @@ entries:
     - https://github.com/sanyer/charts/releases/download/ingress-0.10.1/ingress-0.10.1.tgz
     version: 0.10.1
   kong:
+  - apiVersion: v2
+    appVersion: "3.9"
+    created: "2026-03-12T15:29:10.224792791Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: The Cloud-Native Ingress and API-management
+    digest: 4fba7f27f86727537321c9b0e178665feae907133417268304184be3f0a5a0b5
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/kong
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-3.1.0/kong-3.1.0.tgz
+    version: 3.1.0
   - apiVersion: v2
     appVersion: "3.9"
     created: "2026-01-07T21:28:43.024078253Z"
@@ -1154,4 +1202,4 @@ entries:
     urls:
     - https://github.com/sanyer/charts/releases/download/kong-operator-0.0.1/kong-operator-0.0.1.tgz
     version: 0.0.1
-generated: "2026-03-05T15:28:46.463809608Z"
+generated: "2026-03-12T15:29:10.224960997Z"
