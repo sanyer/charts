@@ -783,6 +783,23 @@ entries:
     version: 0.36.5
   kong-ai-gateway:
   - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-09-01T21:29:14.887843015Z"
+    description: Kong AI Gateway data plane, connecting to a Konnect AI Gateway control
+      plane
+    digest: fe8c8c5aa3b0864df67405eaf2f11c3bf23988dfd61d42d75f2c68b1fcea9c03
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong-ai-gateway
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/kong-ai-gateway
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-ai-gateway-0.2.0/kong-ai-gateway-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 2.0.2-rc.2
     created: "2026-08-19T09:28:51.140570603Z"
     description: Kong AI Gateway data plane, connecting to a Konnect AI Gateway control
@@ -800,6 +817,44 @@ entries:
     - https://github.com/sanyer/charts/releases/download/kong-ai-gateway-0.1.0/kong-ai-gateway-0.1.0.tgz
     version: 0.1.0
   kong-operator:
+  - annotations:
+      artifacthub.io/category: networking
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://developer.konghq.com/operator/
+        - name: Repository
+          url: https://github.com/Kong/kong-operator
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Seamless Upgrades
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: 2.3.0
+    created: "2026-09-01T21:29:15.222051087Z"
+    dependencies:
+    - name: ko-crds
+      repository: ""
+      version: 1.2.0
+    - condition: gwapi-standard-crds.enabled
+      name: gwapi-standard-crds
+      repository: ""
+      version: 1.6.1
+    - condition: gwapi-experimental-crds.enabled
+      name: gwapi-experimental-crds
+      repository: ""
+      version: 1.6.1
+    description: Deploy Kong Operator
+    digest: e93363614ba8aa13fb8af06bbe48f3bba0d998b9f6394f24b6261f50e815b094
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    maintainers:
+    - email: team-k8s@konghq.com
+      name: team-k8s-bot
+    name: kong-operator
+    sources:
+    - https://github.com/Kong/kong-operator/charts/kong-operator/
+    urls:
+    - https://github.com/sanyer/charts/releases/download/kong-operator-1.4.0/kong-operator-1.4.0.tgz
+    version: 1.4.0
   - annotations:
       artifacthub.io/category: networking
       artifacthub.io/links: |
@@ -1559,4 +1614,4 @@ entries:
     urls:
     - https://github.com/sanyer/charts/releases/download/kong-operator-0.0.1/kong-operator-0.0.1.tgz
     version: 0.0.1
-generated: "2026-08-19T09:28:51.140721357Z"
+generated: "2026-09-01T21:29:15.222222676Z"
